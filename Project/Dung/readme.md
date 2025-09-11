@@ -11,6 +11,7 @@
     - Scaper là một công cụ cụ thể được tạo ra để trích xuất dữ liệu từ trang web.
 - Types of Web Scrapers: **Self-built** or Pre-built Web Scrapers, Browser extension or Software Web Scrapers, and Cloud or Local Web Scrapers.
 
+1. Định danh (DOM (Document Object Model))
 
 
 ### Triển khai web 
