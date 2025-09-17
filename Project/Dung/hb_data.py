@@ -1,37 +1,18 @@
-# # scrape_ivolunteer_realtime_csv.py
-# import os, csv, re, time, datetime
-# from urllib.parse import urljoin
-# from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright
 
-# START_URL = "https://ivolunteervietnam.com/"
-# OUT_CSV   = "Projectivolunteer_posts.csv"
-# MAX_POSTS = 60
-# MAX_SCROLLS = 12
+proxies = {
+    "server": "brd.superproxy.io:33335",
+    "username": "brd-customer-hl_f46f9e68-zone-dung_zone1",
+    "password": "2wumzv594s80"
+    
+}
+pw = sync_playwright().start()
+browser = pw.firefox.launch(headless=False, slow_mo=5000, proxy=proxies)
+page = browser.new_page()
+page.goto("http://www.geektime.co.il/") #use cloudflare
+#page.goto("http://www.walmart.com") #captcha
 
-# def main(): 
-#     with sync_playwright() as p:
-#         browser = p.chromium.launch(headless=True)
-#         page = browser.new_page()
-#         page.goto('https://ivolunteervietnam.com/hoc-bong/', wait_until="networkidle")
-#         print("Page loaded successfully:", page.title())
-#         html = page.content()  # toàn bộ DOM hiện tại
-#         print("Page HTML length:", len(html))
-#     # Dynamic elemnt and extract data
-#         page.wait_for_selector("article h2 a") #
-
-#         rows = []
-#         cards = page.locator("article")
-#         for i in range(cards.count()):
-#             c = cards.nth(i)
-#             a = c.locator("h2 a")
-#             title = (a.inner_text() or "").strip()
-#             url   = a.get_attribute("href")
-#             date  = c.locator("time").first.get_attribute("datetime") 
-#             rows.append({"title": title, "url": url, "date": date})
-#             print(f"  - {title} ({date}) [{url}]")
-            
-#         browser.close()
-        
-# if __name__ == "__main__":
-#     main()
-
+page.locator("xpath=//input[@type='search']").fill("testing")
+page.keyboard.press("Enter")
+page.screenshot(path="example.png")
+print("Page title:", page.title())
