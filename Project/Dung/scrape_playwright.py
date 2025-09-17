@@ -4,12 +4,10 @@ import requests
 import os
 
 
-#khong co 
-
 pw = sync_playwright().start()
 browser = pw.firefox.launch(
     headless=False,
-    slow_mo=2000
+    slow_mo=5000
 )
 
 page = browser.new_page()

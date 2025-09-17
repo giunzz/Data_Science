@@ -1,2 +1,2 @@
-
-page.get_by_role("button").get_by_text("Search")
+page.locator("input[aria-label='Search']").fill("clothes")
+# page.locator("button[type='submit']").click()  
