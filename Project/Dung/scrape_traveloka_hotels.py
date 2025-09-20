@@ -21,7 +21,6 @@ page.get_by_placeholder("Search term...").fill("neural network")
 
 page.get_by_role("button").get_by_text("Search").nth(1).click()
 
-# Cập nhật lại XPath để chỉ lấy các liên kết PDF
 links = page.locator("xpath=//a[contains(@href, '/pdf/')]").all()
 
 # Lặp qua các liên kết và tải PDF về
