@@ -1,7 +1,7 @@
 from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
 from urllib.parse import urljoin
 import csv, time, random
-from sub_work import RealtimeCsvWriter,load_existing_urls_quick
+from data.sub_work import RealtimeCsvWriter,load_existing_urls_quick
 
 HOME_URL   = "https://www.topcv.vn/"
 OUTPUT_CSV = r"C:\Users\ASUS\Documents\GitHub\Data_sceince_ute\Data_Science\Project\Dung\job.csv"
