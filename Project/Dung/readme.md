@@ -42,3 +42,7 @@
 2. [Tutorial](https://www.geeksforgeeks.org/python/python-web-scraping-tutorial/)
 
 3.[How To Legally Extract Web Content](https://kinsta.com/knowledgebase/what-is-web-scraping/)
+
+
+- Tạp 
+```pip install -r requirements.txt```
