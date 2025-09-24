@@ -68,9 +68,9 @@ def extract_anime_summary(article_element):
 
 if __name__ == "__main__":
     query = "hanh-dong"
-    source_dir = Path("./export")
+    source_dir = Path("C:/Users/ASUS/Documents/GitHub/Data_sceince_ute/Data_Science/Project/Bình/export")
     source_dir.mkdir(exist_ok=True)
-    source_csv = Path("./Data")
+    source_csv = Path("C:/Users/ASUS/Documents/GitHub/Data_sceince_ute/Data_Science/Project/Bình/Data")
     source_csv.mkdir(exist_ok=True)
 
     #last_page = get_last_page(query)
