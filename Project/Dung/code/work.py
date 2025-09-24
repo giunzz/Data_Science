@@ -7,7 +7,7 @@ HOME_URL   = "https://www.topcv.vn/"
 OUTPUT_CSV = r"C:\Users\ASUS\Documents\GitHub\Data_sceince_ute\Data_Science\Project\Dung\job.csv"
 
 HEADLESS     = False          
-SLOW_MO_MS   = 400
+SLOW_MO_MS   = 3000
 BROWSER_NAME = "firefox"      
 MAX_PAGES    = 1              
 SEARCH_KEY   = "Lập trình nhúng"
