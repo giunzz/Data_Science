@@ -136,7 +136,6 @@ def extract_job_detail(detail_page):
     }
 
 def click_open_popup_and_scrape(page, href):
-    # tìm anchor khớp href (TopCV thêm query theo dõi → dùng starts-with để bền hơn)
     anchor = page.locator(f"a[href='{href}']").first
     if not anchor.count():
         anchor = page.locator(f"a[href^='{href.split('.html')[0]}']").first
@@ -144,7 +143,7 @@ def click_open_popup_and_scrape(page, href):
     human_delay()
 
     with page.expect_popup() as pop_info:
-        anchor.click()  # click thường; target=_blank sẽ mở tab mới
+        anchor.click()  
     detail_page = pop_info.value
 
     detail_page.wait_for_load_state("domcontentloaded")
