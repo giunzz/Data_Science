@@ -1,0 +1,5 @@
+../Core/Src/feeding.c:23:6:feeding_ISR	40	static
+../Core/Src/feeding.c:54:6:feeding_Servo_Spin	16	static
+../Core/Src/feeding.c:67:6:feeding_Handler	8	static
+../Core/Src/feeding.c:78:6:feeding_Init	16	static
+../Core/Src/feeding.c:86:13:feeding_Servo_Angle	24	static
