@@ -1,0 +1,8 @@
+../Core/Src/DS3231.c:10:16:decToBcd	1
+../Core/Src/DS3231.c:14:12:bcdToDec	1
+../Core/Src/DS3231.c:18:13:DS3231_Temp_Conv	2
+../Core/Src/DS3231.c:30:6:DS3231_Init	1
+../Core/Src/DS3231.c:36:6:DS3231_SetTime	2
+../Core/Src/DS3231.c:49:6:DS3231_GetTime	1
+../Core/Src/DS3231.c:63:7:DS3231_GetTemp	1
+../Core/Src/DS3231.c:70:6:DS3231_SetAlarm	4
