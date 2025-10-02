@@ -7,7 +7,7 @@ pw = sync_playwright().start() #Tạo ra một instance điều khiển trình d
 
 browser = pw.firefox.launch(
     headless=False, # run GUI
-    slow_mo=5000 # 1 step = 5s
+    slow_mo= 1000 
 )
 
 page = browser.new_page()

@@ -31,7 +31,7 @@ def download_file(query, page_from, page_to, export_loc):
             with open(filename, "w", encoding="utf-8") as f:
                 f.write(page.content())
 
-            print(f"✅ Saved file: {filename}")
+            print(f"Saved file: {filename}")
 
         browser.close()
 
@@ -44,39 +44,15 @@ def extract_anime_summary(article_element):
 
     return Anime(title=title, url=url, view=view, extra=extra, eps=eps)
 
-# def get_last_page(query, base_url="https://animevietsub.show"):          # tu dong lay so trang cuoi cung
-#     with sync_playwright() as playwright:
-#         browser = playwright.chromium.launch(headless=False)
-#         page = browser.new_page()
-#         url = f"{base_url}/the-loai/{query}/"
-#         page.goto(url)
-#         page.wait_for_load_state("domcontentloaded")
-
-#         soup = BeautifulSoup(page.content(), "html.parser")
-#         browser.close()
-
-#     # Tìm các số trang trong phân trang
-#     pagination = soup.select("ul.pagination a")
-#     pages = []
-#     for p in pagination:
-#         try:
-#             pages.append(int(p.text.strip()))
-#         except:
-#             pass
-
-#     return max(pages) if pages else 1
-
 if __name__ == "__main__":
-    query = "hanh-dong"
-    source_dir = Path("C:/Users/ASUS/Documents/GitHub/Data_sceince_ute/Data_Science/Project/Bình/export")
+    query = "hanh-dong" #hanh-dong, phieu-luu
+    source_dir = Path("./export")
     source_dir.mkdir(exist_ok=True)
-    source_csv = Path("C:/Users/ASUS/Documents/GitHub/Data_sceince_ute/Data_Science/Project/Bình/Data")
+    source_csv = Path("./Data")
     source_csv.mkdir(exist_ok=True)
 
-    #last_page = get_last_page(query)
-    #print(f"Sẽ quét tới trang cuối cùng: {last_page}")
 
-    # 👉 Cho người dùng nhập số trang muốn cào
+    # Cho người dùng nhập số trang muốn cào
     page_to = int(input("Nhập số trang muốn cào: "))
     download_file(query=query, page_from=1, page_to=page_to, export_loc=source_dir)
 
